@@ -13,7 +13,7 @@ router.get("/", (_req, res) => {
   res.send("users");
 });
 
-router.get("/new", (req, res) => {
+router.get("/new", (_req, res) => {
   res.render("users/new");
 });
 
