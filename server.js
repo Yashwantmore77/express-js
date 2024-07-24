@@ -13,4 +13,4 @@ app.get("/", (req, res) => {
 
 const userRouter = require("./routes/users");
 app.use("/users", userRouter);
-app.listen(3000);
+app.listen(3000, ()=>console.log('Application Tsarted'));
