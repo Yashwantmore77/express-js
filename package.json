@@ -6,7 +6,8 @@
   "scripts": {
     "devStart": "nodemon server.js",
     "build": "webpack",
-    "prod": "node dist/final.js"
+    "prod": "node dist/final.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.4",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
