@@ -4,12 +4,12 @@ router.use(logger);
 
 const users = [{ name: "John" }, { name: "Jane" }];
 
-router.param("id", (req, res, next, id) => {
+router.param("id", (req, _res, next, id) => {
   req.userData = users[id];
   next();
 });
 
-router.get("/", (req, res) => {
+router.get("/", (_req, res) => {
   res.send("users");
 });
 
@@ -41,7 +41,7 @@ router
     res.send(`user with ID : ${req.params.id}`);
   });
 
-function logger(req, res, next) {
+function logger(req, _res, next) {
   console.log(req.originalUrl);
   next();
 }
